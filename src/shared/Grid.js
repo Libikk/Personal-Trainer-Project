@@ -5,9 +5,9 @@ class Grid extends Component {
     super(props);
 
     let repos;
-    if (__isBrowser__) {/* eslint-disable-line */
-      repos = window.__INITIAL_DATA__;/* eslint-disable-line */
-      delete window.__INITIAL_DATA__;/* eslint-disable-line */
+    if (__isBrowser__) {
+      repos = window.__INITIAL_DATA__;
+      delete window.__INITIAL_DATA__;
     } else {
       repos = this.props.staticContext.data;
     }
@@ -42,7 +42,6 @@ class Grid extends Component {
   }
   render() {
     const { loading, repos } = this.state;
-
     if (loading === true) {
       return <p>LOADING</p>;
     }

@@ -29,7 +29,9 @@
     "jsx-a11y/click-events-have-key-events": "off",
     "jsx-a11y/no-static-element-interactions": "off",
     "react/no-danger": "off",
+    "no-underscore-dangle": "off",
     "no-mixed-operators": "off",
+    "camelcase": "off",
     "object-curly-newline": "off",
     "no-console": ["warn", { "allow" : ["warn", "error"] }]
   }

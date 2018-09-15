@@ -5,9 +5,9 @@ export function fetchPopularRepos(language = 'all') {
 
   return fetch(encodedURI)
     .then(data => data.json())
-    .then(repos => repos.items)
-    .catch((error) => {
-      console.warn(error);
-      return null;
-    });
+    .then((repos) => {
+      console.log(123);
+      return repos.items;
+    })
+    .catch(console.error);
 }
