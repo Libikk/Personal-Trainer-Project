@@ -1,11 +1,13 @@
 import express from 'express';
 import cors from 'cors';
 import React from 'react';
+import { Provider } from 'react-redux';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter, matchPath } from 'react-router-dom';
 import serialize from 'serialize-javascript';
 import App from '../shared/App';
 import routes from '../shared/routes';
+import store from '../browser/store';
 
 const app = express();
 
@@ -21,8 +23,14 @@ app.get('*', (req, res, next) => {
 
   promise.then((data) => {
     const context = { data };
-
-    const markup = renderToString(<StaticRouter location={req.url} context={context}><App /></StaticRouter>);
+    console.log(store.getState());
+    const markup = renderToString(
+      <Provider store={store}>
+        <StaticRouter location={req.url} context={context}>
+          <App />
+        </StaticRouter>
+      </Provider>,
+      );
 
     res.send(`
       <!DOCTYPE html>

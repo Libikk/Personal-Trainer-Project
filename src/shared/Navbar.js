@@ -23,7 +23,7 @@ export default function Navbar () {
     <ul>
       {languages.map(({ name, param }) => (
         <li key={param}>
-          <NavLink activeStyle={{fontWeight: 'bold'}} to={`/popular/${param}`}>
+          <NavLink activeStyle={{ fontWeight: 'bold' }} to={`/popular/${param}`}>
             {name}
           </NavLink>
         </li>
