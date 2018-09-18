@@ -1,11 +1,12 @@
 {
-  "name": "rr-ssr-gists",
+  "name": "mareksapp",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "start": "npm run webpack | npm run server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack --watch",
+    "build": "webpack",
     "server": "nodemon server.js"
   },
   "author": "",
@@ -39,6 +40,7 @@
     "eslint-plugin-react": "^7.9.1"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "cors": "^2.8.4",
     "express": "^4.16.2",
     "isomorphic-fetch": "^2.2.1",

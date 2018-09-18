@@ -5,8 +5,8 @@ import { Provider } from 'react-redux';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter, matchPath } from 'react-router-dom';
 import serialize from 'serialize-javascript';
-import App from '../shared/App';
-import routes from '../shared/routes';
+import App from '../components/App';
+import routes from '../components/routes';
 import store from '../browser/store';
 
 const app = express();
@@ -23,20 +23,14 @@ app.get('*', (req, res, next) => {
 
   promise.then((data) => {
     const context = { data };
-    console.log(store.getState());
-    const markup = renderToString(
-      <Provider store={store}>
-        <StaticRouter location={req.url} context={context}>
-          <App />
-        </StaticRouter>
-      </Provider>,
-      );
+    const markup = renderToString(<Provider store={store}><StaticRouter location={req.url} context={context}><App /></StaticRouter></Provider>);
 
     res.send(`
       <!DOCTYPE html>
       <html>
         <head>
           <title>Server side rendered page</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <script src="/bundle.js" defer></script>
           <script>window.__INITIAL_DATA__ = ${serialize(data)}</script>
         </head>
