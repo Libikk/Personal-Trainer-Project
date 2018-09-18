@@ -10,37 +10,29 @@
     "server": "nodemon server.js"
   },
   "author": "",
-  "license": "MIT",
+  "license": "ISC",
   "description": "",
-  "babel": {
-    "presets": [
-      "env",
-      "react"
-    ],
-    "plugins": [
-      "transform-object-rest-spread"
-    ]
-  },
   "devDependencies": {
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "nodemon": "^1.18.4",
-    "webpack": "^4.17.2",
-    "webpack-cli": "^3.1.0",
-    "webpack-node-externals": "^1.6.0",
     "eslint": "^4.19.1",
-    "babel-eslint": "^8.2.3",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-async-await": "0.0.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.9.1"
+    "eslint-plugin-react": "^7.9.1",
+    "nodemon": "^1.18.4",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0",
+    "webpack-node-externals": "^1.6.0"
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "cors": "^2.8.4",
     "express": "^4.16.2",
     "isomorphic-fetch": "^2.2.1",
