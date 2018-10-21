@@ -16,9 +16,7 @@ class App extends React.Component {
               key={path}
               path={path}
               exact={exact}
-              render={(props) => {
-                return (<Component {...props} {...rest} />);
-              }}
+              render={props => (<Component {...props} {...rest} />)}
             />
           ))}
           <Route render={props => <NoMatch {...props} />} />
