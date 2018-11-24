@@ -1,7 +1,7 @@
 import Home from './Home/Home';
 import AboutMe from './AboutMe/AboutMe';
 import Transformations from './Transformations/Transformations';
-// import { fetchPopularRepos } from './api';
+import { fetchPopularRepos } from './api';
 
 const routes = [
   {
@@ -18,6 +18,7 @@ const routes = [
     path: '/transformations',
     exact: true,
     component: Transformations,
+    fetchInitialData: (path = '') => fetchPopularRepos(path.split('/').pop()),
   },
   // {
   //   path: '/popular/:id',
