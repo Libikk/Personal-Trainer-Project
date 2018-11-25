@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Route, Link, Redirect, Switch, withRouter } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 import routes from './routes';
 import Layout from './Layout/Layout';
 import ErrorPage from './ErrorPage/ErrorPage';

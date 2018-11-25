@@ -16,7 +16,6 @@ app.use(express.static('public'));
 
 app.get('*', (req, res, next) => {
   const activeRoute = routes.find(route => matchPath(req.url, route)) || {};
-
   const promise = activeRoute.fetchInitialData
     ? activeRoute.fetchInitialData(req.path)
     : Promise.resolve();
@@ -24,7 +23,6 @@ app.get('*', (req, res, next) => {
   promise.then((data) => {
     const context = { data };
     const markup = renderToString(<Provider store={store}><StaticRouter location={req.url} context={context}><App /></StaticRouter></Provider>);
-
     res.send(`
       <!DOCTYPE html>
       <html>
@@ -32,6 +30,7 @@ app.get('*', (req, res, next) => {
           <title>Server side rendered page</title>
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <script src="/bundle.js" defer></script>
+          <link rel="stylesheet" type="text/css" href="css/main.css">
           <script>window.__INITIAL_DATA__ = ${serialize(data)}</script>
         </head>
 
