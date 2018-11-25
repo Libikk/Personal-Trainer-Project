@@ -6,7 +6,7 @@ const initialState = {
 };
 
 const reducer = (state = initialState, action) => {
-  console.log('this is reducer', action.type, action.payload);
+ // console.log('this is reducer', action.type, action.payload);
 
   switch (action.type) {
     case 'AA': {
