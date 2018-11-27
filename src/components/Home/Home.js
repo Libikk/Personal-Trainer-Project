@@ -7,7 +7,7 @@ class Home extends React.Component {
       <div className="homepage">
         This is Home page
         <button onClick={() => console.log('thisi s test')}>test</button>
-        dddddddddddd
+        ffffffffffff
       </div>
     );
   }

@@ -2,6 +2,9 @@ import React from 'react';
 import './AboutMe.css';
 
 class AboutMe extends React.Component {
+  tibia = () => {
+    console.log('ssss')
+  }
   render() {
     return (
       <div className="container">

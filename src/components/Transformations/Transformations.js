@@ -10,11 +10,9 @@ class Transformations extends React.Component {
   componentWillMount = () => {
     this.props.testActionBB('BBBBBBBBBBBB');
     console.log('COMPONENT WILL MOUNTS');
-    axios.get('https://api.nal.usda.gov/ndb/search/?format=json&q=egg&ds=Standard%20Reference&sort=r&max=50&offset=0&api_key=yyrMO7Qv3IbCG81yxhMBin9L9DGue4B0iUGNjWPl')
-      .then(e => console.log('res', e));
   }
   render() {
-    console.log('ptops and this', this.props, this);
+    // console.log('ptops and this', this.props, this);
 
     return (
       <div>
