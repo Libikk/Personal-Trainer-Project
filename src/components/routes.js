@@ -1,6 +1,6 @@
-import Home from './Home/Home';
-import AboutMe from './AboutMe/AboutMe';
-import Transformations from './Transformations/Transformations';
+import Home from './Home';
+import AboutMe from './AboutMe';
+import Transformations from './Transformations';
 import { fetchPopularRepos } from './api';
 
 const routes = [

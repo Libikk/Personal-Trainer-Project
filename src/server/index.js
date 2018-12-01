@@ -30,7 +30,6 @@ app.get('*', (req, res, next) => {
           <title>Server side rendered page</title>
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <script src="/bundle.js" defer></script>
-          <link rel="stylesheet" type="text/css" href="css/main.css">
           <script>window.__INITIAL_DATA__ = ${serialize(data)}</script>
         </head>
 

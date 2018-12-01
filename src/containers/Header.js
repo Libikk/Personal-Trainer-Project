@@ -1,10 +1,13 @@
 import React from 'react';
+import Navbar from './Navbar';
+import '../styles/header.scss';
+
 
 export default class Header extends React.Component {
   render() {
     return (
-      <div style={{ background: 'green' }}>
-          THIS IS HEADER
+      <div className="header-container">
+        <Navbar />
       </div>
     );
   }
