@@ -1,5 +1,5 @@
 import React from 'react';
-import './AboutMe.css';
+import './AboutMe.scss';
 
 class AboutMe extends React.Component {
   tibia = () => {
