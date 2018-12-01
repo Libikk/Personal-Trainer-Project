@@ -30,7 +30,7 @@ const serverConfig = {
   target: 'node',
   externals: [nodeExternals()],
   output: {
-    path: __dirname,
+    path: path.resolve(__dirname, 'public'),
     filename: 'server.js',
     publicPath: '/',
   },

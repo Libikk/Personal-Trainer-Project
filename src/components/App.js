@@ -2,8 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Route, Switch, withRouter } from 'react-router-dom';
 import routes from './routes';
-import Layout from './Layout/Layout';
-import ErrorPage from './ErrorPage/ErrorPage';
+import Layout from '../containers/Layout';
+import ErrorPage from './ErrorPage';
 
 class App extends React.Component {
   render() {

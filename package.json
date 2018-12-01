@@ -6,7 +6,8 @@
     "dev": "npm run dev-build | npm run server",
     "dev-build": "webpack --watch --mode development",
     "build": "webpack --mode production",
-    "server": "nodemon server.js"
+    "server": "nodemon public\\server.js",
+    "prod": "npm run server"
   },
   "author": "",
   "license": "ISC",

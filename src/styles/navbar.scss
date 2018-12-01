@@ -1,0 +1,12 @@
+.navbar-container {
+    color: white;
+    li a {
+        text-decoration: unset;
+        color: white;
+
+        
+        &:hover {
+            color: blue;
+        }
+    }
+}
