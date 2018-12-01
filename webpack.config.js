@@ -1,8 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const nodeExternals = require('webpack-node-externals');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const autoprefixer = require('autoprefixer');
 
 const browserConfig = {
   entry: './src/browser/index.js',
@@ -13,30 +11,16 @@ const browserConfig = {
   },
   module: {
     rules: [
-      { test: /\.(js)$/, use: 'babel-loader' },
+      { test: /\.(js)$/, exclude: /node_modules/, use: 'babel-loader' },
       {
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          use: [
-            {
-              loader: 'css-loader',
-              options: { importLoaders: 1 },
-            },
-            {
-              loader: 'postcss-loader',
-              options: { plugins: [autoprefixer()] },
-            },
-          ],
-        }),
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
       },
     ],
   },
   plugins: [
     new webpack.DefinePlugin({
       __isBrowser__: 'true',
-    }),
-    new ExtractTextPlugin({
-      filename: 'css/[name].css',
     }),
   ],
 };
@@ -52,9 +36,9 @@ const serverConfig = {
   },
   module: {
     rules: [
-      { test: /\.(js)$/, use: 'babel-loader' },
+      { test: /\.(js)$/, exclude: /node_modules/, use: 'babel-loader' },
       {
-        test: /\.css$/,
+        test: /\.(css|scss)$/,
         use: [
           {
             loader: 'css-loader/locals',
