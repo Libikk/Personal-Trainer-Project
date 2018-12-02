@@ -3,8 +3,8 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { testAction, testActionBB } from '../browser/actions';
-
-
+import huj from '../images/owl.jpg';
+import hujj from '../images/ow2l.png';
 
 class Transformations extends React.Component {
   componentWillMount = () => {
@@ -17,9 +17,9 @@ class Transformations extends React.Component {
     return (
       <div>
         THIS IS Transformations ggggggggggggggg
-        <button onClick={() => this.props.testActionBB('BBBBBBBBBBBB')}> testActionBB</button>
-        <button onClick={() => this.props.testAction('xxxxxxx')}> dispatch action</button>
-        <button onClick={() => console.log('thisi s test', this.props)}>test</button>
+        <img alt="awl" src={hujj} />
+        <img alt="awl" src={huj} />
+
       </div>
     );
   }

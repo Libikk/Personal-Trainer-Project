@@ -16,6 +16,13 @@ const browserConfig = {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
       },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        loader: 'file-loader',
+        options: {
+          name: 'images/[name].[ext]',
+        },
+      },
     ],
   },
   plugins: [
@@ -44,6 +51,13 @@ const serverConfig = {
             loader: 'css-loader/locals',
           },
         ],
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        loader: 'file-loader',
+        options: {
+          name: 'images/[name].[ext]',
+        },
       },
     ],
   },

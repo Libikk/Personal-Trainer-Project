@@ -1,12 +1,24 @@
 .navbar-container {
     color: white;
-    li a {
-        text-decoration: unset;
-        color: white;
+    list-style-type: none;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    
+    li {
+        padding: 15px;
 
-        
-        &:hover {
-            color: blue;
+
+        a {
+            text-decoration: unset;
+            color: white;
+            
+            &:hover {
+                color: blue;
+            }
         }
+
     }
 }
