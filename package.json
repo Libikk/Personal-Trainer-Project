@@ -36,6 +36,7 @@
     "webpack-node-externals": "^1.6.0"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.0.0",
     "autoprefixer": "^9.3.1",
     "axios": "^0.18.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
