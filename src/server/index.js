@@ -22,7 +22,13 @@ app.get('*', (req, res, next) => {
 
   promise.then((data) => {
     const context = { data };
-    const markup = renderToString(<Provider store={store}><StaticRouter location={req.url} context={context}><App /></StaticRouter></Provider>);
+    const markup = renderToString(
+      <Provider store={store}>
+        <StaticRouter location={req.url} context={context}>
+          <App />
+        </StaticRouter>
+      </Provider>);
+
     res.send(`
       <!DOCTYPE html>
       <html>

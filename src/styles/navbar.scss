@@ -2,23 +2,23 @@
     color: white;
     list-style-type: none;
     font-size: 30px;
+    margin: 0px;
     display: flex;
-    flex-direction: row;
-    align-content: center;
+    flex-flow: row;
     justify-content: center;
     
     li {
         padding: 15px;
-
-
         a {
             text-decoration: unset;
             color: white;
-            
             &:hover {
                 color: blue;
             }
         }
 
+    }
+    .selected-route {
+        text-decoration: underline;
     }
 }

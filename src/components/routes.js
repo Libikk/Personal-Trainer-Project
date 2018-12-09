@@ -1,5 +1,8 @@
 import Home from './Home';
-import AboutMe from './AboutMe';
+import About from './About';
+import Services from './Services';
+import Prices from './Prices';
+import Contact from './Contact';
 import Transformations from './Transformations';
 import { fetchPopularRepos } from './api';
 
@@ -10,9 +13,24 @@ const routes = [
     component: Home,
   },
   {
-    path: '/aboutme',
+    path: '/about',
     exact: true,
-    component: AboutMe,
+    component: About,
+  },
+  {
+    path: '/services',
+    exact: true,
+    component: Services,
+  },
+  {
+    path: '/prices',
+    exact: true,
+    component: Prices,
+  },
+  {
+    path: '/contact',
+    exact: true,
+    component: Contact,
   },
   {
     path: '/transformations',
