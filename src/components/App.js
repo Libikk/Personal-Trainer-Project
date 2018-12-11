@@ -9,14 +9,14 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Layout >
+        <Layout location={this.props.location}>
           <Switch>
             {routes.map(({ path, exact, component: Component, ...rest }) => (
               <Route
                 key={path}
                 path={path}
                 exact={exact}
-                render={props => (<Component {...props} {...rest} />)}
+                render={props => (<Component path={path} {...props} {...rest} />)}
               />
             ))}
             <Route render={props => <ErrorPage {...props} />} />
