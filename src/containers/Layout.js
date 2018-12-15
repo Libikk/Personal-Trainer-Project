@@ -6,7 +6,7 @@ import '../styles/layout.scss';
 class Layout extends React.Component {
   render() {
     return (
-      <div>
+      <div className="f">
         <Header location={this.props.location} />
         <section>
           {this.props.children}

@@ -1,18 +1,31 @@
 import React from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { hideLoadingBar, showLoadingBar } from '../browser/actions';
 import '../styles/prices.scss';
 
 class Prices extends React.Component {
-  tibia = () => {
-    console.log('ssss')
+  componentWillMount() {
+    this.props.showLoadingBar();
   }
+  componentDidMount() {
+    this.props.hideLoadingBar();
+  }
+
   render() {
     return (
       <div className="container">
         THIS IS PricesPricesPricesPrices page
-        <button onClick={() => console.log('thisi s test')}>test</button>
       </div>
     );
   }
 }
 
-export default Prices;
+function matchDispatchToProps(dispatch) {
+  return bindActionCreators({
+    showLoadingBar,
+    hideLoadingBar,
+  }, dispatch);
+}
+
+export default connect(state => state, matchDispatchToProps)(Prices);

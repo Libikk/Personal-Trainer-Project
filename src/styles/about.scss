@@ -1,9 +1,11 @@
+@import '_variables';
+
 .container {
     background: green;
     color: red;
     font-size: 33px;
     button {
         font-size: 100px;
-        color: yellow;
+        color: $greyDarker;
     }
 }
