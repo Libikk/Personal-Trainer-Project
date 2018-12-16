@@ -1,13 +1,13 @@
 import React from 'react';
 import '../styles/home.scss';
 
+import ptSession from '../images/pt_session.jpg';
+
 class Home extends React.Component {
   render() {
     return (
       <div className="homepage">
-        This is Home page
-        <button onClick={() => console.log('thisi s test')}>test</button>
-        ffffffffffff
+        <img src={ptSession} alt="pt_session" />
       </div>
     );
   }

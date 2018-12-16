@@ -1,9 +1,37 @@
+@import '_variables';
+
 .header-container {
-    
-    background: black;
-    color: white;
+    display: flex;
+    flex-flow: row;
+    margin: 15px 10px 10px;
+
 
     .header__logo {
-        width: 150px;
+        flex-grow: 1;
+        text-align: center;
+
+        img {
+            width: 150px;
+        }
+    }
+
+    .header__social-media {
+        display: flex;
+        flex-flow: row;
+        flex-grow: 1;
+
+        * {
+            display: flex;
+            align-items: center;
+            margin: 5px;
+        }
+    }
+
+    ul {
+        flex-grow: 1;
+        li {
+            display: flex;
+            align-items: center;
+        }
     }
 }

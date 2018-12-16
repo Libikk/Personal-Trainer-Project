@@ -1,4 +1,10 @@
 .homepage {
     color:purple;
     font-size: 60px;
+    width: 100%;
+
+    img {
+        max-width: 100%;
+        filter: brightness(80%);
+    }
 }

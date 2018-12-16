@@ -5,11 +5,16 @@ import { hideLoadingBar, showLoadingBar } from '../browser/actions';
 import '../styles/prices.scss';
 
 class Prices extends React.Component {
+  
   componentWillMount() {
     this.props.showLoadingBar();
+    console.log('componentWillMount')
   }
   componentDidMount() {
-    this.props.hideLoadingBar();
+    console.log('did')
+    setTimeout(() => {
+      this.props.hideLoadingBar();
+    }, 1000);
   }
 
   render() {

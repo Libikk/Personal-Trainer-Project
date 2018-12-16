@@ -1,24 +1,25 @@
+@import '_variables';
+
 .navbar-container {
     color: white;
     list-style-type: none;
     font-size: 30px;
     margin: 0px;
     display: flex;
-    flex-flow: row;
+    flex-wrap: wrap;
     justify-content: center;
     
     li {
         padding: 15px;
         a {
             text-decoration: unset;
-            color: white;
-            &:hover {
-                color: blue;
+            button {
+                font-weight: 500;
             }
         }
 
     }
-    .selected-route {
-        text-decoration: underline;
+    .selected-route button {
+        background: $secondaryColor2;
     }
 }
