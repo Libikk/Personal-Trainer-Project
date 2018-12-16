@@ -22,7 +22,7 @@ app.get('*', (req, res, next) => {
 
   promise.then((data) => {
     const context = { data };
-    const markup = renderToString(
+    const markup = renderToString( /* eslint-disable-line */
       <Provider store={store}>
         <StaticRouter location={req.url} context={context}>
           <App />
@@ -37,6 +37,7 @@ app.get('*', (req, res, next) => {
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <script src="/bundle.js" defer></script>
           <script>window.__INITIAL_DATA__ = ${serialize(data)}</script>
+          <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
         </head>
 
         <body>

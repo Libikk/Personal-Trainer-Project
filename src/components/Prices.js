@@ -9,7 +9,9 @@ class Prices extends React.Component {
     this.props.showLoadingBar();
   }
   componentDidMount() {
-    this.props.hideLoadingBar();
+    setTimeout(() => {
+      this.props.hideLoadingBar();
+    }, 1000);
   }
 
   render() {

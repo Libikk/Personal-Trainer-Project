@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import '../styles/navbar.scss';
+import Button from '@material-ui/core/Button';
 
 class Navbar extends React.Component {
   render() {
@@ -19,7 +20,7 @@ class Navbar extends React.Component {
         {routes.map(route => (
           <li key={route.href} className={route.href === this.props.location.pathname ? 'selected-route' : null}>
             <Link href={route.href} to={route.href}>
-              {route.text}
+              <Button variant="contained">{route.text}</Button>
             </Link>
           </li>
         ))}
