@@ -9,10 +9,14 @@ import App from '../components/App';
 import routes from '../components/routes';
 import store from '../browser/store';
 
+import api from './api';
+
 const app = express();
 
 app.use(cors());
 app.use(express.static('public'));
+
+app.use('/api', api);
 
 app.get('*', (req, res, next) => {
   const activeRoute = routes.find(route => matchPath(req.url, route)) || {};
