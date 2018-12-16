@@ -8,7 +8,7 @@ export const fetchPopularRepos = (language = 'all') => {
   //   .then(data => data.json())
   //   .then(repos => repos.items)
   //   .catch((error) => {
-  //     console.warn(error);
+  //     console.warn(error)
   //     return null;
   //   });
   // console.log('this is api file ', language, store, testActionBB);
