@@ -42,6 +42,7 @@ app.get('*', (req, res, next) => {
           <script src="/bundle.js" defer></script>
           <script>window.__INITIAL_DATA__ = ${serialize(data)}</script>
           <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+          <link rel="stylesheet" id="stylesCSS" href="style.css">
         </head>
 
         <body>

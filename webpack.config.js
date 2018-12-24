@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const nodeExternals = require('webpack-node-externals');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const browserConfig = {
   entry: ['@babel/polyfill', './src/browser/index.js'],
@@ -27,7 +28,7 @@ const browserConfig = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      __isBrowser__: 'true',
+      __isBrowser__: true,
     }),
   ],
 };
@@ -45,12 +46,11 @@ const serverConfig = {
     rules: [
       { test: /\.(js)$/, exclude: /node_modules/, use: 'babel-loader' },
       {
-        test: /\.(css|scss)$/,
-        use: [
-          {
-            loader: 'css-loader/locals',
-          },
-        ],
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader']
+        })
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
@@ -63,8 +63,9 @@ const serverConfig = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      __isBrowser__: 'false',
+      __isBrowser__: false,
     }),
+    new ExtractTextPlugin('style.css')
   ],
 };
 
