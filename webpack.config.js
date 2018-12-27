@@ -22,6 +22,7 @@ const browserConfig = {
         loader: 'file-loader',
         options: {
           name: 'images/[name].[ext]',
+          emitFile: false,
         },
       },
     ],
@@ -49,8 +50,8 @@ const serverConfig = {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader']
-        })
+          use: ['css-loader', 'sass-loader'],
+        }),
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
@@ -65,7 +66,7 @@ const serverConfig = {
     new webpack.DefinePlugin({
       __isBrowser__: false,
     }),
-    new ExtractTextPlugin('style.css')
+    new ExtractTextPlugin('style.css'),
   ],
 };
 

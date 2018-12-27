@@ -19,8 +19,7 @@ class Navbar extends React.Component {
         {routes.map(route => (
           <li key={route.href} className={route.href === this.props.location.pathname ? 'selected-route' : null}>
             <Link href={route.href} to={route.href}>
-              <button
-              >{route.text}</button>
+              <span className="primary-button">{route.text}</span>
             </Link>
           </li>
         ))}

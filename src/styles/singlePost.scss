@@ -1,0 +1,93 @@
+.posts__post {
+    position: relative;
+
+    .post__likes-and-comments {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: white;
+        z-index: 1;
+        
+        span {
+            display: block;
+        }
+    }
+
+    &:hover {
+        .post__likes-and-comments {
+            display: block;
+        }
+
+        .post__image {
+            filter: brightness(75%);
+            cursor: pointer;
+        }
+    }
+
+    .post__image {
+        max-width: 293px;
+        min-width: 120px;
+    }
+
+
+    .details__pop-up {
+        top: 0;
+        left: 0;
+        font-size: 14px;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center; 
+        color: #262626;
+
+        .pop-up__background {
+            opacity: 0.2;
+            background-color: black;
+            height: 100%;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            position: fixed;
+            z-index: 3;
+        }
+
+        .pop-up__content {
+            z-index: 4;
+            font-size: 14px;
+            position: fixed;
+            margin: 20px;
+            background: white;
+
+            img, video {
+                max-width: 90%;
+            }
+            .pop-up__header {
+                font-weight: 500;
+                img {
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                }
+
+                span a {
+                    color: #3897f0;
+                    cursor: pointer;
+                }
+            }
+
+            .pop-up__body {
+                max-width: 287px;
+                padding: 24px;
+
+                a {
+                    color: #003569;
+                }
+            }
+        }
+    }
+}
