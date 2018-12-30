@@ -16,11 +16,8 @@ class Transformations extends React.Component {
       });
   }
   render() {
-    // console.log('ptops and this', this.props, this);
-
     return (
       <div>
-        THIS IS Transformations ggggggggggggggg
         <img alt="awl" src={hujj} />
         <img alt="awl" src={huj} />
       </div>

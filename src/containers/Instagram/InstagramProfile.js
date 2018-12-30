@@ -1,10 +1,12 @@
 import React from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
+import _ from 'lodash';
 import { bindActionCreators } from 'redux';
 import { hideLoadingBar, showLoadingBar } from '../../browser/actions';
 import '../../styles/instagramProfile.scss';
 import SinglePost from './SinglePost';
+
 
 class InstagramProfile extends React.Component {
     state = {
@@ -12,16 +14,27 @@ class InstagramProfile extends React.Component {
       openedPostId: null,
     }
 
+
   componentDidMount = () => {
     this.props.showLoadingBar();
     axios.get('http://localhost:3000/api/instagramProfile')
       .then((response) => {
         this.setState({ profileData: response.data.data });
         this.props.hideLoadingBar();
+        this.getPostsDetails(response.data.data);
       });
   }
-  // comments api
-  // https://api.instagram.com/v1/media/1886888411587956789_2164039005/comments?access_token=2164039005.49def82.d77d63458ae648b880b162c7699fd9cd
+
+  getPostsDetails = (posts) => {
+    const promises = posts.map((post) => {
+      const mediaId = post.link.split('/')[4];
+      return axios.get(`http://localhost:3000/api/instagramPostDetails/${mediaId}`).then(res => res.data);
+    });
+
+    Promise.all(promises).then((response) => {
+      this.setState({ profileData: this.state.profileData.map((e, index) => Object.assign({}, { ...response[index], ...e })) });
+    });
+  }
 
   openPostDetails = postId => this.setState({ openedPostId: postId });
   closePostDetails = () => this.setState({ openedPostId: null });

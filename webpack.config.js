@@ -18,12 +18,25 @@ const browserConfig = {
         use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|jpg|gif)$/,
         loader: 'file-loader',
         options: {
           name: 'images/[name].[ext]',
-          emitFile: false,
         },
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+          {
+            loader: 'react-svg-loader',
+            options: {
+              jsx: true, // true outputs JSX tags
+            },
+          },
+        ],
       },
     ],
   },
@@ -54,11 +67,25 @@ const serverConfig = {
         }),
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|jpg|gif)$/,
         loader: 'file-loader',
         options: {
           name: 'images/[name].[ext]',
         },
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+          {
+            loader: 'react-svg-loader',
+            options: {
+              jsx: true, // true outputs JSX tags
+            },
+          },
+        ],
       },
     ],
   },

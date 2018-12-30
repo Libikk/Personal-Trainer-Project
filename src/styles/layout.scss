@@ -4,7 +4,9 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
+// globals
 
+// buttons
 .primary-button {
     color: rgba(0, 0, 0, 0.87);
     font-weight: 500;
@@ -17,7 +19,18 @@ body {
     letter-spacing: 0.02857em;
     text-transform: uppercase;
 }
-
+// a href
 a {
     text-decoration: none;
+}
+
+// icons 
+.icon__heart-fill, .icon__comment-fill, {
+    width: 24px;
+    height: 24px;
+
+    path {
+        fill: white;
+        stroke: white;
+    }
 }
