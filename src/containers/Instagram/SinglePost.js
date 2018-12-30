@@ -8,7 +8,7 @@ import PlayIcon from '../../icons/play.svg';
 
 const instagramUrl = 'https://www.instagram.com/';
 
-class SinglePost extends React.Component {
+class SinglePost extends React.Component {  
   state = {
     isPlaying: true,
   }
@@ -36,9 +36,9 @@ class SinglePost extends React.Component {
   fullPost = () => {
     const { images, likes, videos, user, caption, tags, location, comment, uploadDate } = this.props.profile;
     const media = (
-      <div className="pop-up__media-wrapper">{
+      <article className="pop-up__media-wrapper">{
       videos ? (
-        <div>
+        <figure >
           {this.state.isPlaying ? <PlayIcon className="media-wrapper__play-icon" onClick={() => this.videoControl()} /> : null}
           <video
             onPlay={() => this.setState({ isPlaying: false })}
@@ -47,13 +47,13 @@ class SinglePost extends React.Component {
             onClick={() => this.videoControl()}
             controls
           >
-            <source src={videos.standard_resolution.url} />
+            <source src={videos.low_resolution.url} />
             <track default kind="captions" srcLang="en" />
           </video>
-        </div>)
+        </figure >)
       : (<img src={images.standard_resolution.url} alt="test" />)
     }
-      </div>
+      </article >
     );
 
     return (
@@ -61,8 +61,8 @@ class SinglePost extends React.Component {
         <div onClick={() => this.props.closePostDetails()} className="pop-up__background" />
         <div className="pop-up__content">
           {media}
-          <div className="pop-up__side-bar">
-            <div className="pop-up__header">
+          <aside className="pop-up__side-bar">
+            <header className="pop-up__header">
               <img src={user.profile_picture} alt="profile" />
               <div className="header__wrapper">
                 <div>
@@ -71,8 +71,8 @@ class SinglePost extends React.Component {
                 </div>
                 {location ? <span className="header__location">{location.name}</span> : null}
               </div>
-            </div>
-            <div className="pop-up__body">
+            </header>
+            <article className="pop-up__body">
               <div className="body__comments">
                 <ul>
                   <li>
@@ -96,8 +96,8 @@ class SinglePost extends React.Component {
                 <section>Liked by {likes.count}</section>
                 <time dateTime={this.getUploadDate(uploadDate)} className="details__upload-date">{this.getUploadDate(uploadDate)}</time>
               </div>
-            </div>
-          </div>
+            </article>
+          </aside>
         </div>
       </article>);
   }
@@ -106,7 +106,7 @@ class SinglePost extends React.Component {
     const { images, likes, comments, id, videos } = this.props.profile;
     return (
       <div className="posts__post">
-        <div className="post__likes-and-comments">
+        <div className="post__likes-and-comments" onClick={() => this.props.openPostDetails(id)}>
           <span><HeartIcon className="icon__heart-fill" />{likes.count}</span>
           <span><CommentIcon className="icon__comment-fill" />{comments.count}</span>
         </div>

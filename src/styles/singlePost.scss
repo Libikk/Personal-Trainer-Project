@@ -24,8 +24,10 @@
 
     &:hover {
         .post__likes-and-comments {
+            cursor: pointer;
             display: flex;
             flex-direction: row;
+
             span {
                 padding: 3px;
             }
@@ -71,7 +73,7 @@
 
         .pop-up__content {
             z-index: 4;
-            max-height: 569px;
+            max-height: 600px;
             max-width: 935px;
             font-size: 14px;
             position: fixed;
@@ -82,23 +84,31 @@
             .pop-up__media-wrapper {
                 max-width: 600px;
                 position: relative;
-
-                img, video {
-                    max-width: 100%;
+                
+                img {
+                    width: 100%;
+                    height: 100%;
                 }
 
-                video {
-                    cursor: pointer;
-                }
-
-                .media-wrapper__play-icon {
-                    cursor: pointer;
-                    position: absolute;
-                    width: 84px;
-                    height: 84px;
-                    left: 50%;
-                    top: 50%;
-                    transform: translate(-50%, -50%);
+                figure {
+                    margin: 0;
+                    width: 600px;
+    
+                    video {
+                        cursor: pointer;
+                        width: 100%;
+                        height: 100%;
+                    }
+    
+                    .media-wrapper__play-icon {
+                        cursor: pointer;
+                        position: absolute;
+                        width: 84px;
+                        height: 84px;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                    }
                 }
             }
             .pop-up__side-bar {

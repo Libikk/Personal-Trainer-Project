@@ -1,17 +1,15 @@
 import React from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
-import _ from 'lodash';
 import { bindActionCreators } from 'redux';
 import { hideLoadingBar, showLoadingBar } from '../../browser/actions';
 import '../../styles/instagramProfile.scss';
 import SinglePost from './SinglePost';
 
-
 class InstagramProfile extends React.Component {
     state = {
       profileData: null,
-      openedPostId: null,
+      openedPostId: '',
     }
 
 
