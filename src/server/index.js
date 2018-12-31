@@ -1,4 +1,5 @@
 import express from 'express';
+import dotenv from 'dotenv';
 import cors from 'cors';
 import React from 'react';
 import { Provider } from 'react-redux';
@@ -10,7 +11,7 @@ import routes from '../components/routes';
 import store from '../browser/store';
 import api from './api';
 
-require('dotenv').config();
+dotenv.config();
 
 const app = express();
 
