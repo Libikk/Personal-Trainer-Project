@@ -1,13 +1,13 @@
 {
   "name": "mareksapp",
   "version": "1.0.0",
-  "main": "public\\server.js",
+  "main": "server.js",
   "scripts": {
     "dev": "npm run dev-build | npm run server",
     "prod": "npm run build && npm run server",
     "dev-build": "webpack --watch --mode development",
     "build": "webpack --mode production",
-    "server": "nodemon public\\server.js"
+    "server": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
