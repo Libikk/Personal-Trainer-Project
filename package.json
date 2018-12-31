@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run dev-build | npm run server",
+    "dev": "npm run dev-build && npm run server",
+    "prod": "npm run build && npm run server",
     "dev-build": "webpack --watch --mode development",
     "build": "webpack --mode production",
-    "server": "nodemon public\\server.js",
-    "prod": "npm run server"
+    "server": "nodemon public\\server.js"
   },
   "author": "",
   "license": "ISC",
