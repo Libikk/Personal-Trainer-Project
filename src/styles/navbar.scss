@@ -13,13 +13,10 @@
         padding: 15px;
         a {
             text-decoration: unset;
-            button {
-                font-weight: 500;
-            }
         }
 
     }
-    .selected-route button {
+    .selected-route .primary-button {
         background: $secondaryColor2;
     }
 }

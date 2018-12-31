@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const nodeExternals = require('webpack-node-externals');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const browserConfig = {
   entry: ['@babel/polyfill', './src/browser/index.js'],
@@ -17,17 +18,31 @@ const browserConfig = {
         use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|jpg|gif)$/,
         loader: 'file-loader',
         options: {
           name: 'images/[name].[ext]',
         },
       },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+          {
+            loader: 'react-svg-loader',
+            options: {
+              jsx: true, // true outputs JSX tags
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
     new webpack.DefinePlugin({
-      __isBrowser__: 'true',
+      __isBrowser__: true,
     }),
   ],
 };
@@ -45,26 +60,40 @@ const serverConfig = {
     rules: [
       { test: /\.(js)$/, exclude: /node_modules/, use: 'babel-loader' },
       {
-        test: /\.(css|scss)$/,
-        use: [
-          {
-            loader: 'css-loader/locals',
-          },
-        ],
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader'],
+        }),
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|jpg|gif)$/,
         loader: 'file-loader',
         options: {
           name: 'images/[name].[ext]',
         },
       },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+          {
+            loader: 'react-svg-loader',
+            options: {
+              jsx: true, // true outputs JSX tags
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
     new webpack.DefinePlugin({
-      __isBrowser__: 'false',
+      __isBrowser__: false,
     }),
+    new ExtractTextPlugin('style.css'),
   ],
 };
 

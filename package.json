@@ -1,13 +1,13 @@
 {
   "name": "mareksapp",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "public\\server.js",
   "scripts": {
-    "dev": "npm run dev-build | npm run server",
+    "dev": "npm run dev-build && npm run server",
+    "prod": "npm run build && npm run server",
     "dev-build": "webpack --watch --mode development",
     "build": "webpack --mode production",
-    "server": "nodemon public\\server.js",
-    "prod": "npm run server"
+    "server": "nodemon public\\server.js"
   },
   "author": "",
   "license": "ISC",
@@ -29,6 +29,7 @@
     "file-loader": "^2.0.0",
     "node-sass": "^4.10.0",
     "nodemon": "^1.18.4",
+    "react-svg-loader": "^2.1.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.17.2",
@@ -43,10 +44,11 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "circular-json": "^0.5.9",
     "cors": "^2.8.4",
+    "dom-parser": "^0.1.5",
     "express": "^4.16.2",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.11",
+    "moment": "^2.23.0",
     "postcss-loader": "^3.0.0",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
