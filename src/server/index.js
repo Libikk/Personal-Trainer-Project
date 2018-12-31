@@ -54,7 +54,7 @@ app.get('*', (req, res, next) => {
   }).catch(next);
 });
 app.listen(3000, () => {
-  console.log('<> Server is listening on port: 3000'); /* eslint-disable-line */
+  console.log(' Your server available at http://localhost:3000'); /* eslint-disable-line */
 });
 
 /*
