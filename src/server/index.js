@@ -8,8 +8,9 @@ import serialize from 'serialize-javascript';
 import App from '../components/App';
 import routes from '../components/routes';
 import store from '../browser/store';
-
 import api from './api';
+
+require('dotenv').config();
 
 const app = express();
 
