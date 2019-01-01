@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import { hideLoadingBar, showLoadingBar } from '../../browser/actions';
 import '../../styles/instagramProfile.scss';
 import SinglePost from './SinglePost';
+import appConfig from '../../../appConfig';
 
 class InstagramProfile extends React.Component {
     state = {
@@ -15,7 +16,7 @@ class InstagramProfile extends React.Component {
 
   componentDidMount = () => {
     this.props.showLoadingBar();
-    axios.get('http://localhost:3000/api/instagramProfile')
+    axios.get(`${appConfig.url}/instagramProfile`)
       .then((response) => {
         this.setState({ profileData: response.data.data });
         this.props.hideLoadingBar();
@@ -26,7 +27,7 @@ class InstagramProfile extends React.Component {
   getPostsDetails = (posts) => {
     const promises = posts.map((post) => {
       const mediaId = post.link.split('/')[4];
-      return axios.get(`http://localhost:3000/api/instagramPostDetails/${mediaId}`).then(res => res.data);
+      return axios.get(`${appConfig.url}/api/instagramPostDetails/${mediaId}`).then(res => res.data);
     });
 
     Promise.all(promises).then((response) => {

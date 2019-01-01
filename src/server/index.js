@@ -10,6 +10,7 @@ import App from '../components/App';
 import routes from '../components/routes';
 import store from '../browser/store';
 import api from './api';
+import appConfig from '../../appConfig';
 
 dotenv.config();
 
@@ -54,8 +55,8 @@ app.get('*', (req, res, next) => {
     `);
   }).catch(next);
 });
-app.listen(3000, () => {
-  console.log(' Your server available at http://localhost:3000'); /* eslint-disable-line */
+app.listen(appConfig.port, () => {
+  console.log(` Your server available at ${appConfig.url}`); /* eslint-disable-line */
 });
 
 /*
