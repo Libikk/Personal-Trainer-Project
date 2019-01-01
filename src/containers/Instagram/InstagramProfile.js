@@ -16,7 +16,7 @@ class InstagramProfile extends React.Component {
 
   componentDidMount = () => {
     this.props.showLoadingBar();
-    axios.get(`${appConfig.url}/instagramProfile`)
+    axios.get(`${appConfig.url}/api/instagramProfile`)
       .then((response) => {
         this.setState({ profileData: response.data.data });
         this.props.hideLoadingBar();
