@@ -2,7 +2,12 @@ import LoadingBar from 'react-redux-loading-bar';
 import React from 'react';
 import Navbar from './Navbar';
 import '../styles/header.scss';
-import hujj from '../images/logo_black.png';
+import hujj from '../images/banana.png';
+
+import FacebookIcon from '../icons/facebook.svg';
+import TwitterIcon from '../icons/twitter.svg';
+import InstagramIcon from '../icons/instagram.svg';
+import YoutubeIcon from '../icons/youtube.svg';
 
 
 export default class Header extends React.Component {
@@ -15,10 +20,10 @@ export default class Header extends React.Component {
         </div>
         <Navbar location={this.props.location} />
         <div className="header__social-media">
-          <div>FB</div>
-          <div>INSTA</div>
-          <div>YT</div>
-          <div>TWITT</div>
+          <FacebookIcon />
+          <TwitterIcon />
+          <InstagramIcon />
+          <YoutubeIcon />
         </div>
       </div>
     );

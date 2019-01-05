@@ -3,6 +3,7 @@
     margin: 14px;
 
     .post__likes-and-comments {
+        pointer-events: none;
         display: none;
         position: absolute;
         left: 50%;
@@ -24,7 +25,6 @@
 
     &:hover {
         .post__likes-and-comments {
-            cursor: pointer;
             display: flex;
             flex-direction: row;
 
@@ -218,6 +218,7 @@
         top: 10px;
         width: 10%;
         height: 10%;
+        pointer-events: none;
 
         path {
             fill: white;
