@@ -1,11 +1,68 @@
-$background-bright: yellow;
-$background-dark: green;
+@import '_variables';
 
-
-.footer-container {
-    height: 150px;
-    background: black;
+.footer {
+    background: $secondaryColor3;
     color: white;
     text-align: center;
     font-size: 40px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+
+    .footer__content {
+
+        .content__contact {
+            font-size: 2vmin;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            
+            span {
+                flex-grow: 1;
+                margin: 0 10px;
+                display: flex;
+                width: 25%;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+
+                svg {
+                    margin: 0 0 4px 4px;
+                    width: 5vmin;
+                    * {
+                        fill: $primaryColor3;
+                    }
+                }
+
+                :nth-child(2) {
+                    width: 50%;
+                }
+            }
+
+
+
+        }
+        .content__icons {
+            margin: 7px 0;
+
+            svg  {
+                margin: 10px;
+                * {
+                    fill: white;
+                }
+            }
+        }   
+
+        .content__copyrights {
+            font-size: 16px;
+
+            a {
+                color: $primaryColor3;
+
+            }
+        }
+    }
+
+
 }

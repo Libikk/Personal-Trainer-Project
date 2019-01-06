@@ -1,9 +1,13 @@
 @import '_variables';
 
 .header-container {
+    position: sticky;
+    z-index: 1;
+    top: 0;
     display: flex;
     flex-flow: row;
-    margin: 15px 10px 10px;
+    padding: 15px 10px 10px;
+    background: $secondaryColor3;
 
 
     .header__logo {
@@ -11,7 +15,7 @@
         text-align: center;
 
         img {
-            width: 150px;
+            width: 200px;
         }
     }
 
@@ -24,6 +28,9 @@
             display: flex;
             align-items: center;
             margin: 5px;
+            * {
+                fill: white;
+            }
         }
     }
 

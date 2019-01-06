@@ -1,4 +1,4 @@
-<svg viewBox="0 0 48 48" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 48 48" width="48" height="100%" xmlns="http://www.w3.org/2000/svg">
   <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
   <path stroke="#e6e7e8" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" fill="#e6e7e8" id="svg_2" d="m4.552302,7.194612l0,33.610791c0,2.080061 2.319914,3.411342 4.243643,2.435206l33.118923,-16.805418c2.043773,-1.037041 2.043773,-3.833324 0,-4.870411l-33.118923,-16.805403c-1.923729,-0.976105 -4.243643,0.355175 -4.243643,2.435236z" class="st1"/>
 

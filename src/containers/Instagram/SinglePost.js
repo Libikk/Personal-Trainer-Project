@@ -8,7 +8,7 @@ import PlayIcon from '../../icons/play.svg';
 
 const instagramUrl = 'https://www.instagram.com/';
 
-class SinglePost extends React.Component {  
+class SinglePost extends React.Component {
   state = {
     isPlaying: true,
   }
@@ -106,7 +106,7 @@ class SinglePost extends React.Component {
     const { images, likes, comments, id, videos } = this.props.profile;
     return (
       <div className="posts__post">
-        <div className="post__likes-and-comments" onClick={() => this.props.openPostDetails(id)}>
+        <div className="post__likes-and-comments">
           <span><HeartIcon className="icon__heart-fill" />{likes.count}</span>
           <span><CommentIcon className="icon__comment-fill" />{comments.count}</span>
         </div>
