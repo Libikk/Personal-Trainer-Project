@@ -1,21 +1,44 @@
 @import '_variables';
 
 .navbar-container {
-    color: white;
-    list-style-type: none;
-    font-size: 30px;
-    margin: 0px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    
-    li {
-        padding: 15px;
-        a {
-            text-decoration: unset;
+    .navbar-desktop {
+        color: white;
+        font-size: 30px;
+        margin: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+
+        @media screen and (max-width: $small) {
+            display: none;
+        }
+        
+        .route {
+            padding: 0 10px 10px;
+            a {
+                text-decoration: unset;
+            }
+        }
+    }
+
+    .navbar-mobile {
+        position: relative;
+
+        @media screen and (min-width: $small) {
+            display: none;
         }
 
+        .mobile__wrapper {
+            position: absolute;
+            left: -175px;
+
+            .wrapper__close {
+                position: absolute;
+            }
+        }
     }
+
     .selected-route .primary-button {
         background: $primaryColor3;
     }
