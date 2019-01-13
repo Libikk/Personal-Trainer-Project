@@ -38,12 +38,12 @@ class Navbar extends React.Component {
           {readyRoutes}
         </div>
         <div className="navbar-mobile">
-          <MenuIcon onClick={() => this.toggleButton()} />
+          <MenuIcon className="mobile__menu-button" onClick={() => this.toggleButton()} />
           {
             this.state.menuOpen ? (
               <div className="mobile__wrapper">
-                <MenuCloseIcon className="wrapper__close" onClick={() => this.toggleButton()} />
-                {readyRoutes}
+                <div className="wrapper__routes">{readyRoutes}</div>
+                <div className="wrapper__close"><MenuCloseIcon onClick={() => this.toggleButton()} /></div>
               </div>
             ) : null
           }
