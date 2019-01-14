@@ -7,7 +7,7 @@ import MenuCloseIcon from '../icons/menu_close.svg';
 
 class Navbar extends React.Component {
   state = {
-    menuOpen: true,
+    menuOpen: false,
   }
 
   toggleButton = () => {
@@ -26,7 +26,7 @@ class Navbar extends React.Component {
 
     const readyRoutes = routes.map(route => (
       <div key={route.href} className={`route ${route.href === this.props.location.pathname ? 'selected-route' : ''}`}>
-        <Link href={route.href} to={route.href}>
+        <Link onClick={() => this.toggleButton()} href={route.href} to={route.href}>
           <span className="primary-button">{route.text}</span>
         </Link>
       </div>
