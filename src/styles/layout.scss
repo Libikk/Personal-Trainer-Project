@@ -19,6 +19,10 @@ body {
     letter-spacing: 0.02857em;
     text-transform: uppercase;
     display: block;
+    
+    &:hover {
+        background-color: white;
+    }
 }
 // a href
 a {
