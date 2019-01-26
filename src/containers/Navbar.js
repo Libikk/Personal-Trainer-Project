@@ -7,7 +7,7 @@ import MenuCloseIcon from '../icons/menu_close.svg';
 
 class Navbar extends React.Component {
   state = {
-    menuOpen: false,
+    menuOpen: true,
   }
 
   toggleButton = () => {
