@@ -4,6 +4,7 @@ import cors from 'cors';
 import React from 'react';
 import { Provider } from 'react-redux';
 import { renderToString } from 'react-dom/server';
+import * as Sentry from '@sentry/node';
 import { StaticRouter, matchPath } from 'react-router-dom';
 import serialize from 'serialize-javascript';
 import App from '../components/App';
@@ -12,13 +13,26 @@ import store from '../browser/store';
 import api from './api';
 import appConfig from '../../appConfig';
 
+
+Sentry.init({ dsn: `https://${process.env.SENTRY_PUBLIC_KEY}@sentry.io/${process.env.SENTRY_PROJECT_ID}` });
+
+process.on('unhandledRejection', (reason, p) => {
+  const err = `Possibly Unhandled Rejection at: Promise ${JSON.stringify(p)},\n reason: ${reason}`;
+  console.error(err);
+  Sentry.captureException(err);
+});
+
+process.on('uncaughtException', (err) => {
+  console.error(err);
+  Sentry.captureException(err, 'Uncaught Exception thrown');
+  process.exit(1);
+});
+
 dotenv.config();
 
 const app = express();
-
 app.use(cors());
 app.use(express.static('public'));
-
 app.use('/api', api);
 
 app.get('*', (req, res, next) => {
