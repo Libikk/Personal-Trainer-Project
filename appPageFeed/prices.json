@@ -1,0 +1,70 @@
+[
+    {
+        "title": "2 Sessions Per Week",
+        "sessionsAmountPerWeek": 2,
+        "plans": [
+            {
+                "periodValue": 1,
+                "sessionPrice": 60,
+                "totalCost": 480,
+                "totalSessionsAmount": 9,
+                "saving": 0
+            },
+            {
+                "periodValue": 2,
+                "sessionPrice": 50,
+                "totalCost": 800,
+                "totalSessionsAmount": 18,
+                "saving": 99
+            },
+            {
+                "periodValue": 4,
+                "sessionPrice": 40,
+                "totalCost": 1280,
+                "totalSessionsAmount": 36,
+                "saving": 99
+            },
+            {
+                "periodValue": 6,
+                "sessionPrice": 35,
+                "totalCost": 1680,
+                "totalSessionsAmount": 54,
+                "saving": 99
+            }
+        ]
+    },
+    {
+        "title": "3 Sessions Per Week",
+        "sessionsAmountPerWeek": 3,
+        "plans": [
+            {
+                "periodValue": 1,
+                "sessionPrice": 60,
+                "totalCost": 480,
+                "totalSessionsAmount": 15,
+                "saving": 0
+            },
+            {
+                "periodValue": 2,
+                "sessionPrice": 50,
+                "totalCost": 800,
+                "totalSessionsAmount": 27,
+                "saving": 99
+            },
+            {
+                "periodValue": 4,
+                "sessionPrice": 40,
+                "totalCost": 1280,
+                "totalSessionsAmount": 54,
+                "saving": 99
+            },
+            {
+                "periodValue": 6,
+                "sessionPrice": 35,
+                "totalCost": 1680,
+                "totalSessionsAmount": 81,
+                "saving": 99
+            }
+        ]
+    }
+]
