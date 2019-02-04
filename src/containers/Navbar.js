@@ -11,9 +11,7 @@ class Navbar extends React.Component {
   }
 
   toggleButton = () => {
-    console.log('before', this.menuOpen);
     this.setState(prevState => ({ menuOpen: !prevState.menuOpen }));
-    console.log('after', this.menuOpen);
   }
 
   render() {
