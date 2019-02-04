@@ -8,7 +8,7 @@ class Services extends React.Component {
   render() {
     return (
       <div className="container">
-        THIS IS Services pageeeeee
+        THIS IS Services page
         <button onClick={() => console.log('thisi s test')}>test</button>
       </div>
     );
