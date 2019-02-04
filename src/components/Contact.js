@@ -10,7 +10,7 @@ class Contact extends React.Component {
     const latitude = 51.5853;
     const kingsburyPosition = [longitude, latitude];
 
-    const mapboxgl = require('mapbox-gl');
+    const mapboxgl = require('mapbox-gl'); /* eslint-disable-line */
     mapboxgl.accessToken = 'pk.eyJ1IjoibGliaWsiLCJhIjoiY2pybnJ2b3ZpMDdlYTQ0cnE1ejQ0cTJvNSJ9.QHb1hw8gKHkxiJnqOt6VJQ';
     map = new mapboxgl.Map({
       container: 'entry-map',
@@ -73,7 +73,6 @@ class Contact extends React.Component {
             <input type="email" name="emailaddress" placeholder="E-MAIL" />
             <textarea placeholder="YOUR MESSAGE" />
           </form>
-          <button onClick={() => document.getElementById('mystyle').style.width = '300px'}>aa</button>
         </div>
       </div>
     );
