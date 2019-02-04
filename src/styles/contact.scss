@@ -1,0 +1,48 @@
+@import '_variables';
+
+.mystyle {
+    width: 200px;;
+}
+.contact-container {
+    position: relative;
+    .mystyle {
+        width: 100px;
+    }
+    .container__contact-form {
+        position: relative;
+
+        .contact-form__wrapper {
+            border-radius: 2px;
+            background: #e2e2e2;
+            width: 500px;
+            margin-left: 30px;
+            padding: 5px;
+            position: relative;
+            top: -20px;
+            box-shadow: 0 16px 32px rgba(34,34,34,0.9);
+            display: flex;
+            flex-direction: column;
+
+            h1 {
+                text-align: center;
+            }
+
+            input, textarea {
+                margin: 0 15px;
+                width: calc(100% - 47px);
+                max-width: calc(100% - 47px);
+                max-height: 300px;
+                background: transparent;
+                transition: all .3s;
+                border: none;
+                outline: none;
+                padding: 16px;
+                border-bottom: 2px solid transparent;
+
+                &:focus {
+                    border-bottom: solid 2px grey;
+                }
+            }
+        }
+    }
+}
