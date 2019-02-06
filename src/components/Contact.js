@@ -72,6 +72,9 @@ class Contact extends React.Component {
             <input type="text" name="fullname" placeholder="FULL NAME" />
             <input type="email" name="emailaddress" placeholder="E-MAIL" />
             <textarea placeholder="YOUR MESSAGE" />
+            <div className="button-container">
+              <span className="primary-button">SEND MESSAGE</span>
+            </div>
           </form>
         </div>
       </div>
