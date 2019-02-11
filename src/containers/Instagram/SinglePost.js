@@ -1,28 +1,16 @@
 import React from 'react';
-import moment from 'moment';
 import '../../styles/singlePost.scss';
 import HeartIcon from '../../icons/heart.svg';
 import CommentIcon from '../../icons/comment.svg';
 import CameraIcon from '../../icons/camera.svg';
 import PlayIcon from '../../icons/play.svg';
+import utils from '../../utils';
 
 const instagramUrl = 'https://www.instagram.com/';
 
 class SinglePost extends React.Component {
   state = {
     isPlaying: true,
-  }
-  getUploadDate = (date) => {
-    const isMinuteDisplay = moment().diff(date, 'minutes') < 60;
-    const isLessThen24h = moment().diff(date, 'hours') > 24;
-    const is7DaysOlder = moment().diff(date, 'days') > 7;
-
-    const hoursOrMinutes = isMinuteDisplay ? `${moment().diff(date, 'minutes')} minutes ago` : `${moment().diff(date, 'hours')} hours ago`;
-    const days = is7DaysOlder ? moment(date).format('DD') : `${moment().diff(date, 'days')} days ago`;
-    const month = is7DaysOlder ? moment(date).format('MMMM') : '';
-    const year = moment().isSame(date, 'year') ? '' : `, ${moment(date).format('YYYY')}`;
-
-    return isLessThen24h ? `${days} ${month + year}` : hoursOrMinutes;
   }
 
   goToProfile = (profile = 'libik9') => window.open(`${instagramUrl + profile}/`, '_blank');
@@ -94,7 +82,7 @@ class SinglePost extends React.Component {
                   <CommentIcon />
                 </section>
                 <section>Liked by {likes.count}</section>
-                <time dateTime={this.getUploadDate(uploadDate)} className="details__upload-date">{this.getUploadDate(uploadDate)}</time>
+                <time dateTime={utils.getTextUploadTime(uploadDate)} className="details__upload-date">{utils.getTextUploadTime(uploadDate)}</time>
               </div>
             </article>
           </aside>

@@ -1,0 +1,55 @@
+.transformations-container {
+    width: 100%;
+    align-items: center;
+
+    .transformations__wrapper {
+        max-width: 1260px;
+        margin: 0 auto;
+
+        .single-transformation {
+            margin: 50px 0;
+            padding: 0 50px 35px;
+            min-height: 300px;
+            border-bottom: 1px solid #e3e3e3;
+
+            .transformation__image-wrapper {
+                float: left;
+                margin: 0 40px 20px 0;
+                position: relative;
+                
+                .promo {
+                    margin-top: -4px;
+                }
+                img:last-child {
+                    position: absolute;
+                    max-width: 100px;
+                    top: 72%;
+                    right: -16%;
+                }
+            }
+
+            .transformation__details {
+                padding-top: 20px;
+
+                .details__person-name {
+                    font-weight: 700;
+
+                    sup {
+                        font-weight: 500;
+                    }
+                }
+
+                .details__about-person {
+                    margin-top: 20px;
+                    line-height: 25px;
+                }
+            }
+        }
+    }
+
+    .load-more {
+        width: max-content;
+        margin: 0 auto;
+        margin-bottom: 45px;
+    }
+}
