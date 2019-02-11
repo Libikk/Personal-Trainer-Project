@@ -16,8 +16,9 @@ class Transformations extends React.Component {
     this.setState({ transformationLimitDisplay: this.state.transformationLimitDisplay + 1 });
   }
   render() {
+    const sortedTransformations = transformationList.sort((a, b) => new Date(b.uploadDate) - new Date(a.uploadDate));
     const { transformationLimitDisplay } = this.state;
-    const transformationsListRendered = transformationList.slice(0, transformationLimitDisplay).map((e) => {
+    const transformationsListRendered = sortedTransformations.slice(0, transformationLimitDisplay).map((e) => {
       const image = require(`../images/${e.images}`);// eslint-disable-line
       return (
         <div className="single-transformation" key={e.personName}>
@@ -37,7 +38,7 @@ class Transformations extends React.Component {
         <div className="transformations__wrapper">
           {transformationsListRendered}
         </div>
-        { transformationLimitDisplay >= transformationList.length ? null : <span className="primary-button load-more" onClick={() => this.loadMoreTransformations()}>Load more</span>}
+        { transformationLimitDisplay >= sortedTransformations.length ? null : <span className="primary-button load-more" onClick={() => this.loadMoreTransformations()}>Load more</span>}
       </div>
     );
   }
