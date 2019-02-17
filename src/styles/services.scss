@@ -1,14 +1,23 @@
 @import '_variables';
 
 .services__container {
+    padding: 0 20px;
+    background: $thirdColor3;
 
     .services__options {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
+        max-width: 1000px;
+        margin: 0 auto;
+
 
         .options__single-option {
-            border: 1px black solid;
+            max-width: 150px;
+
+            img {
+                max-width: 100%;
+            }
         }
     }
 

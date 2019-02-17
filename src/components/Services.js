@@ -15,6 +15,7 @@ class Services extends React.Component {
           {
               services.map(singleService => (
                 <div className="options__single-option">
+                  <img src={require(`../images/${singleService.imageUrl}`)} alt={singleService.serviceName} />
                   {singleService.serviceName}
                 </div>))
             }

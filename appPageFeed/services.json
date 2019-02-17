@@ -1,11 +1,14 @@
 [
     {
-        "serviceName": "Male Fat Loss"
+        "serviceName": "Male Fat Loss",
+        "imageUrl": "mantraining.png"
     },
     {
-        "serviceName": "12 Weeks Muscle Building"
+        "serviceName": "12 Weeks Muscle Building",
+        "imageUrl": "womantraining.png"
     },
     {
-        "serviceName": "Female Fat Loss"
+        "serviceName": "Female Fat Loss",
+        "imageUrl": "womantraining.png"
     }
 ]
