@@ -6,7 +6,7 @@
     top: 0;
     display: flex;
     flex-flow: row;
-    padding: 10px 10px 25px;
+    padding: 10px 10px 0;
     background: $secondaryColor3;
 
 
@@ -16,6 +16,10 @@
 
         img {
             width: 150px;
+
+            @media screen and (max-width: $small) {
+                width: 90px;
+            }
         }
     }
 

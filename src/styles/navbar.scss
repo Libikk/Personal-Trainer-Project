@@ -25,6 +25,7 @@
     .navbar-mobile {
         position: relative;
         cursor: pointer;
+        margin-top: 7px;
         
         @media screen and (min-width: $small) {
             display: none;
