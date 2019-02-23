@@ -9,11 +9,11 @@ import utils from '../utils';
 
 class Transformations extends React.Component {
   state = {
-    transformationLimitDisplay: 1,
+    transformationLimitDisplay: 3,
   }
 
   loadMoreTransformations = () => {
-    this.setState({ transformationLimitDisplay: this.state.transformationLimitDisplay + 1 });
+    this.setState({ transformationLimitDisplay: this.state.transformationLimitDisplay + 2 });
   }
   render() {
     const sortedTransformations = transformationList.sort((a, b) => new Date(b.uploadDate) - new Date(a.uploadDate));
