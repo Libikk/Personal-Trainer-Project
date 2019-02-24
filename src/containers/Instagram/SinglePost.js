@@ -43,23 +43,24 @@ class SinglePost extends React.Component {
     }
       </article >
     );
-
+    const popupHead = (
+      <header className="pop-up__header">
+        <img src={user.profile_picture} alt="profile" />
+        <div className="header__wrapper">
+          <div>
+            <span onClick={() => this.goToProfile()}>{user.username}</span> •
+            <span className="header__follow" onClick={() => this.goToProfile()}> Follow</span>
+          </div>
+          {location ? <span className="header__location">{location.name}</span> : null}
+        </div>
+      </header>);
     return (
       <article className="details__pop-up">
         <div onClick={() => this.props.closePostDetails()} className="pop-up__background" />
         <div className="pop-up__content">
           {media}
           <aside className="pop-up__side-bar">
-            <header className="pop-up__header">
-              <img src={user.profile_picture} alt="profile" />
-              <div className="header__wrapper">
-                <div>
-                  <span onClick={() => this.goToProfile()}>{user.username}</span> •
-                  <span className="header__follow" onClick={() => this.goToProfile()}> Follow</span>
-                </div>
-                {location ? <span className="header__location">{location.name}</span> : null}
-              </div>
-            </header>
+            {popupHead}
             <article className="pop-up__body">
               <div className="body__comments">
                 <ul>

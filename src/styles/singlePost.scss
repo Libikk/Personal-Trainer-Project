@@ -1,3 +1,5 @@
+@import '_variables';
+
 .posts__post {
     position: relative;
     margin: 14px;
@@ -77,17 +79,35 @@
             max-width: 935px;
             font-size: 14px;
             position: fixed;
-            margin: 20px;
             background: white;
+            width: 90vw;
             display: flex;
 
+            @media screen and (max-width: $small) {
+                flex-direction: column;
+                max-height: unset;
+            }
+            
             .pop-up__media-wrapper {
                 max-width: 600px;
                 position: relative;
+                display: flex;
+                align-items: center;
+                background: black;
+
+                @media screen and (max-width: $small) {
+                    max-width: 100%;
+                    min-height: fit-content;
+                }
                 
                 img {
                     width: 100%;
                     height: 100%;
+
+                    @media screen and (max-width: $small) {
+                        margin: auto;
+                        max-width: 500px;
+                    }
                 }
 
                 figure {
@@ -118,6 +138,10 @@
 
                 margin-right: 0;
                 padding: 20px 24px;
+
+                @media screen and (max-width: $small) {
+                    max-width: unset;
+                }
 
                 .pop-up__header {
                     font-weight: 500;
