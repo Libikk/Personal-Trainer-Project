@@ -1,3 +1,5 @@
+@import '_variables';
+
 .posts__post {
     position: relative;
     margin: 14px;
@@ -77,17 +79,81 @@
             max-width: 935px;
             font-size: 14px;
             position: fixed;
-            margin: 20px;
             background: white;
+            width: 90vw;
             display: flex;
 
+            @media screen and (max-width: $small) {
+                flex-direction: column;
+                max-height: unset;
+                max-width: 600px;
+            }
+            
+            .pop-up__header {
+                font-weight: 500;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #efefef;
+                display: flex;
+                flex-direction: row;
+
+                img {
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                }
+
+                .header__wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-left: 10px;
+
+                    .header__location {
+                        font-weight: normal;
+                        font-size: 12px;
+                        margin-top: 2px;
+                    }
+
+                    .header__follow {
+                        color: #3897f0;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .header__small-devices {
+                padding: 15px 24px;
+                @media screen and (min-width: $small) {
+                    display: none;
+                }
+            }
+
+            .header__large-devices {
+                @media screen and (max-width: $small) {
+                    display: none;
+                }
+            }
+            
             .pop-up__media-wrapper {
                 max-width: 600px;
                 position: relative;
+                display: flex;
+                align-items: center;
+                background: black;
+
+                @media screen and (max-width: $small) {
+                    max-width: 100%;
+                    min-height: fit-content;
+                }
                 
                 img {
                     width: 100%;
                     height: 100%;
+
+                    @media screen and (max-width: $small) {
+                        margin: auto;
+                        max-width: 500px;
+                    }
                 }
 
                 figure {
@@ -119,37 +185,10 @@
                 margin-right: 0;
                 padding: 20px 24px;
 
-                .pop-up__header {
-                    font-weight: 500;
-                    padding-bottom: 20px;
-                    border-bottom: 1px solid #efefef;
-                    display: flex;
-                    flex-direction: row;
-
-                    img {
-                        height: 40px;
-                        width: 40px;
-                        border-radius: 50%;
-                    }
-
-                    .header__wrapper {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        margin-left: 10px;
-
-                        .header__location {
-                            font-weight: normal;
-                            font-size: 12px;
-                            margin-top: 2px;
-                        }
-    
-                        .header__follow {
-                            color: #3897f0;
-                            cursor: pointer;
-                        }
-                    }
+                @media screen and (max-width: $small) {
+                    max-width: unset;
                 }
+
     
                 .pop-up__body {  
                     .body__comments {
@@ -205,6 +244,25 @@
                             font-size: 10px;
                             margin: 3px 0 5px;
                             text-transform: uppercase;
+                        }
+                    }
+
+                    .body-details__small-devices {
+                        @media screen and (min-width: $small) {
+                            display: none;
+                        }
+                        time {
+                            display: none
+                        }
+                    }
+    
+                    .body-details__large-devices {
+                        @media screen and (max-width: $small) {
+                            border-bottom: unset;
+                            section {
+                                display: none;
+                            }
+
                         }
                     }
                 }
