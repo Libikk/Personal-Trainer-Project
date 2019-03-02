@@ -43,8 +43,8 @@ class SinglePost extends React.Component {
     }
       </article >
     );
-    const popupHead = (
-      <header className="pop-up__header">
+    const popupHead = version => (
+      <header className={`pop-up__header ${version}`}>
         <img src={user.profile_picture} alt="profile" />
         <div className="header__wrapper">
           <div>
@@ -53,15 +53,30 @@ class SinglePost extends React.Component {
           </div>
           {location ? <span className="header__location">{location.name}</span> : null}
         </div>
-      </header>);
+      </header>
+    );
+
+    const uploadTime = <time dateTime={utils.getTextUploadTime(uploadDate)} className="details__upload-date">{utils.getTextUploadTime(uploadDate)}</time>;
+    const bodyDetails = version => (
+      <div className={`body__details ${version}`}>
+        <section className="details__icons">
+          <HeartIcon />
+          <CommentIcon />
+        </section>
+        <section>Liked by {likes.count}</section>
+        {uploadTime}
+      </div>);
+
     return (
       <article className="details__pop-up">
         <div onClick={() => this.props.closePostDetails()} className="pop-up__background" />
         <div className="pop-up__content">
+          {popupHead('header__small-devices')}
           {media}
           <aside className="pop-up__side-bar">
-            {popupHead}
+            {popupHead('header__large-devices')}
             <article className="pop-up__body">
+              {bodyDetails('body-details__small-devices')}
               <div className="body__comments">
                 <ul>
                   <li>
@@ -77,14 +92,7 @@ class SinglePost extends React.Component {
                   }) : null}
                 </ul>
               </div>
-              <div className="body__details">
-                <section className="details__icons">
-                  <HeartIcon />
-                  <CommentIcon />
-                </section>
-                <section>Liked by {likes.count}</section>
-                <time dateTime={utils.getTextUploadTime(uploadDate)} className="details__upload-date">{utils.getTextUploadTime(uploadDate)}</time>
-              </div>
+              {bodyDetails('body-details__large-devices')}
             </article>
           </aside>
         </div>

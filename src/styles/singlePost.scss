@@ -86,6 +86,52 @@
             @media screen and (max-width: $small) {
                 flex-direction: column;
                 max-height: unset;
+                max-width: 600px;
+            }
+            
+            .pop-up__header {
+                font-weight: 500;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #efefef;
+                display: flex;
+                flex-direction: row;
+
+                img {
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                }
+
+                .header__wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-left: 10px;
+
+                    .header__location {
+                        font-weight: normal;
+                        font-size: 12px;
+                        margin-top: 2px;
+                    }
+
+                    .header__follow {
+                        color: #3897f0;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .header__small-devices {
+                padding: 15px 24px;
+                @media screen and (min-width: $small) {
+                    display: none;
+                }
+            }
+
+            .header__large-devices {
+                @media screen and (max-width: $small) {
+                    display: none;
+                }
             }
             
             .pop-up__media-wrapper {
@@ -143,37 +189,6 @@
                     max-width: unset;
                 }
 
-                .pop-up__header {
-                    font-weight: 500;
-                    padding-bottom: 20px;
-                    border-bottom: 1px solid #efefef;
-                    display: flex;
-                    flex-direction: row;
-
-                    img {
-                        height: 40px;
-                        width: 40px;
-                        border-radius: 50%;
-                    }
-
-                    .header__wrapper {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        margin-left: 10px;
-
-                        .header__location {
-                            font-weight: normal;
-                            font-size: 12px;
-                            margin-top: 2px;
-                        }
-    
-                        .header__follow {
-                            color: #3897f0;
-                            cursor: pointer;
-                        }
-                    }
-                }
     
                 .pop-up__body {  
                     .body__comments {
@@ -229,6 +244,25 @@
                             font-size: 10px;
                             margin: 3px 0 5px;
                             text-transform: uppercase;
+                        }
+                    }
+
+                    .body-details__small-devices {
+                        @media screen and (min-width: $small) {
+                            display: none;
+                        }
+                        time {
+                            display: none
+                        }
+                    }
+    
+                    .body-details__large-devices {
+                        @media screen and (max-width: $small) {
+                            border-bottom: unset;
+                            section {
+                                display: none;
+                            }
+
                         }
                     }
                 }
