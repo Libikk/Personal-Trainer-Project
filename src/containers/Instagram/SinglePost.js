@@ -16,9 +16,10 @@ class SinglePost extends React.Component {
   goToProfile = (profile = 'libik9') => window.open(`${instagramUrl + profile}/`, '_blank');
 
   videoControl = () => {
-    const { video } = this;
-    if (video.paused) return video.play();
-    return video.pause();
+    // uncomment if play button woudn't work
+    // const { video } = this;
+    // if (video.paused) return video.play();
+    // return video.pause();
   }
 
   fullPost = () => {
