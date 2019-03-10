@@ -54,7 +54,7 @@ app.get('*', (req, res, next) => {
       <!DOCTYPE html>
       <html>
         <head>
-          <title>Server side rendered page</title>
+          <title>Banana Fitness</title>
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <script src="/bundle.js" defer></script>
           <script>window.__INITIAL_DATA__ = ${serialize(data)}</script>

@@ -17,7 +17,11 @@ class Contact extends React.Component {
       style: 'mapbox://styles/mapbox/streets-v11',
       zoom: 14.5,
       center: kingsburyPosition,
+      scrollZoom: {
+        ctrl: true,
+      },
     });
+    map.scrollZoom.disable();
     map.on('load', () => {
       /* Image: An image is loaded and added to the map. */
       map.loadImage('https://i.imgur.com/MK4NUzI.png', (error, image) => {
