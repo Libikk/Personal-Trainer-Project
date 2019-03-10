@@ -1,7 +1,7 @@
 @import '_variables';
 
 .services__container {
-    padding: 0 20px;
+    padding: 20px 20px;
     background: $thirdColor3;
 
     .services__options {
@@ -10,6 +10,7 @@
         justify-content: space-between;
         max-width: 1000px;
         margin: 0 auto;
+        display: none; // DONT SHOW THIS ANYMORE TEMPORARLY
 
 
         .options__single-option {
@@ -26,7 +27,7 @@
         padding: 60px;
         margin: 40px auto;
 
-        padding: 50px;
+        padding: 40px 3vw;
         border: 1px solid black;
         background: #9B786F;
 
