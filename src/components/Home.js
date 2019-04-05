@@ -18,19 +18,24 @@ class Home extends React.Component {
     return (
       <div className="homepage">
         <img src={ptSession} alt="pt_session" />
-        <div>
-          <h1>YOUR DESIRE TO CHANGE IS WHAT DRIVES ME!</h1>
-          <div className="thin-line" />
+        <div className="homepage__header">
+          <h1>HOW IT WORKS</h1>
           <div className="homepage__steps">
-            {Steps.map((e) => {
+            {Steps.map((e, index) => {
               const Icon = icons[e.iconName];
               return (
-                <div className="steps__single" key={e.stepTitle}>
-                  {e.stepTitle}
-                  <Icon />
-                  <span>{e.subTitle}</span>
-                  {e.text}
-                  <a href={e.buttonName.toLowerCase()}>{e.buttonName}</a>
+                <div className="steps__single-step" key={e.stepTitle}>
+                  <header>
+                    <h1><span>Step</span>{` ${index + 1}. `}{e.stepTitle}</h1>
+                  </header>
+                  <div className="single-step__body">
+                    <Icon />
+                    <span className="body__subtitle">{e.subTitle}</span>
+                    <span className="body__text">{e.text}</span>
+                  </div>
+                  <span className="body__button primary-button">
+                    <a href={`./${e.buttonName.toLowerCase()}`}>{e.buttonName}</a>
+                  </span>
                 </div>
               );
             })}

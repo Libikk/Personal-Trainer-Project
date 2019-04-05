@@ -1,10 +1,98 @@
+@import '_variables';
+
 .homepage {
-    color:purple;
-    font-size: 60px;
+    //color:purple;
+    //font-size: 60px;
     width: 100%;
+    .homepage__header {
+        text-align: center;
+        font-size: 2.3vmin;
+    }
 
     img {
         max-width: 100%;
         filter: brightness(80%);
+    }
+
+    .homepage__steps {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 20px;
+
+        @media screen and (max-width: $small) {
+            flex-direction: column;
+            margin-bottom: 0px;
+        }
+
+        .steps__single-step {
+            color:white;
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border: 1px solid black;
+            background: $thirdColor3;
+            transition: all .2s;
+            position: relative;
+
+            &:hover {
+                transform: scale(1.15);
+            }
+
+            @media screen and (max-width: $small) {
+                width: 58%;
+                margin: 0 auto;
+                margin-bottom: 20px;
+            }
+
+            header {
+                background: $secondaryColor3;
+                width: 100%;
+
+                h1 {
+                    font-size: 2.7vmin;
+                    color: $primaryColor3;
+
+                    span {
+                        color: white;
+                        font-size: 1.9vmin;
+                    }
+                }
+            }
+            
+            .single-step__body {
+                padding: 10px 10px 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 32px;
+
+                .body__subtitle {
+                    font-size: 2.5vmin;
+                    text-decoration: underline;
+                    margin-bottom: 10px;
+                }
+
+                .body__text {
+                    font-size: 2vmin;
+                }
+    
+                svg {
+                    margin: 10px 0;
+                    width: 10vmin;
+                }
+            }
+            .body__button {
+                a {
+                    color: black;
+                }
+
+                position: absolute;
+                letter-spacing: 1px;
+                bottom: 8px;
+            }
+        }
     }
 }
