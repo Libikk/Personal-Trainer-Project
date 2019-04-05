@@ -1,0 +1,23 @@
+[
+    {
+        "stepTitle": "INTERVIEW",
+        "subTitle": "Your goals and the time frame",
+        "text": "Tell us about yourself and we will develop a training and nutrition plan that fits your needs and expectations.",
+        "iconName": "Interview",
+        "buttonName": "About"
+    },
+    {
+        "stepTitle": "TRAINING",
+        "subTitle": "The time and place are up to you",
+        "text": "It can be a gym, your home or a park. The training is adjusted to your abilities and needs.",
+        "iconName": "Training",
+        "buttonName": "Services"
+    },
+    {
+        "stepTitle": "RESULTS",
+        "subTitle": "We help you unlock your fitness potential",
+        "text": "Our personal trainings guarantee maximum results in minimum time.",
+        "iconName": "Trophy",
+        "buttonName": "Contact"
+    }
+]
