@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/contact.scss';
+import Banner from '../containers/Banner';
 
 
 let map;
@@ -68,6 +69,7 @@ class Contact extends React.Component {
     };
     return (
       <div className="contact-container">
+        <Banner page={'contact'} />
         <map style={style} id="entry-map" />
         <div className="container__contact-form">
           <form action="#" className="contact-form__wrapper">

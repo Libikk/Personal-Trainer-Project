@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/services.scss';
+import Banner from '../containers/Banner';
 import services from '../../appPageFeed/services.json';
 import logo from '../images/banana.png';
 import ApprovalIcon from '../icons/approval.svg';
@@ -11,6 +12,7 @@ class Services extends React.Component {
   render() {
     return (
       <div className="services__container">
+        <Banner page='services' />
         <div className="services__options">
           {
               services.map(singleService => (

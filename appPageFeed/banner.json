@@ -1,0 +1,86 @@
+{
+    "home": [
+        {
+            "text": "Today I will do what others won’t, so tomorrow I can accomplish what others can’t.",
+            "author": "Jerry Rice"
+        },
+        {
+            "text": "Do something today that your future self will thank you for.",
+            "author": "Unknown"
+        },
+        {
+            "text": "We are what we repeatedly do. Excellence then is not an act but a habit.",
+            "author": "Aristotle"
+        }
+    ],
+    "about": [
+        {
+            "text": "No matter how slow you go, you are still lapping everybody on the couch.",
+            "author": "Unknown"
+        },
+        {
+            "text": "Sweat is fat crying.",
+            "author": "Unknown"
+        },
+        {
+            "text": "You miss 100% of the shots you don’t take.",
+            "author": "Wayne Gretzky"
+        }
+    ],
+    "services": [
+        {
+            "text": "The difference between the impossible and the possible lies in a person’s determination.",
+            "author": "Tommy Lasorda"
+        },
+        {
+            "text": "If you want something you’ve never had, you must be willing to do something you’ve never done.",
+            "author": "Thomas Jefferson"
+        },
+        {
+            "text": "To give anything less than your best is to sacrifice the gift.",
+            "author": "Steve Prefontaine"
+        }
+    ],
+    "prices": [
+        {
+            "text": "You’re only one workout away from a good mood.",
+            "author": "Unknown"
+        },
+        {
+            "text": "Nothing will work unless you do.",
+            "author": "Maya Angelou"
+        },
+        {
+            "text": "Life begins at the end of your comfort zone.",
+            "author": "Unknown"
+        }
+    ],
+    "transformations": [
+        {
+            "text": "I’ve missed more than 9,000 shots in my career. I’ve lost almost 300 games. Twenty-six times I’ve been trusted to take the game-winning shot and missed. I’ve failed over and over and over again in my life. And that is why I succeed.",
+            "author": "Michael Jordan"
+        },
+        {
+            "text": "Strength does not come from physical capacity. It comes from an indomitable will.",
+            "author": "Mahatma Gandhi"
+        },
+        {
+            "text": "The difference between try and triumph is a little ‘umph’.",
+            "author": "Unknown"
+        }
+    ],
+    "contact": [
+        {
+            "text": "The last three or four reps is what makes the muscle grow. This area of pain divides the champion from someone else who is not a champion. That’s what most people lack, having the guts to go on and just say they’ll go through the pain no matter what happens.",
+            "author": "Arnold Schwarzenegger"
+        },
+        {
+            "text": "Don’t count the days, make the days count.",
+            "author": "Muhammad Ali"
+        },
+        {
+            "text": "Making excuses burns zero calories per hour.",
+            "author": "Unknown"
+        }
+    ]
+}
