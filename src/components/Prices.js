@@ -10,7 +10,7 @@ class Prices extends React.Component {
   render() {
     return (
       <div className="prices">
-        <Banner page='prices' />
+        <Banner page="prices" />
         {
           prices.map(pricing => (
             <section className="prices__container" key={pricing.title}>
