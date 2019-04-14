@@ -21,48 +21,51 @@
             }
         }
     }
+    .about-wrapper {
+        margin: 0 20px;
 
-    .about-results {
-        max-width: 730px;
-        padding: 60px;
-        margin: 40px auto;
+        .about-results {
+            max-width: 730px;
+            padding: 60px;
+            margin: 40px auto;
 
-        padding: 40px 3vw;
-        border: 1px solid black;
-        background: #9B786F;
+            padding: 40px 3vw;
+            border: 1px solid black;
+            background: #9B786F;
 
-        .results {
-            color: $primaryColor3;
-        }
-
-        .about-results__header {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-bottom: 20px;
-
-            img {
-                width: 135px;
-                height: 100%;
+            .results {
+                color: $primaryColor3;
             }
-        }
 
-        .about-results__body {
-            line-height: 30px;
-            text-align: center;
+            .about-results__header {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: 20px;
 
-            ul {
-                list-style-type: none;
-                padding-inline-start: 10px;
+                img {
+                    width: 135px;
+                    height: 100%;
+                }
+            }
 
-                li {
-                    position: relative;
-                    padding: 8px 0 12px 40px;
+            .about-results__body {
+                line-height: 30px;
+                text-align: center;
 
-                    svg {
-                        position: absolute;
-                        top: 2px;
-                        left: -10px;
+                ul {
+                    list-style-type: none;
+                    padding-inline-start: 10px;
+
+                    li {
+                        position: relative;
+                        padding: 8px 0 12px 40px;
+
+                        svg {
+                            position: absolute;
+                            top: 2px;
+                            left: -10px;
+                        }
                     }
                 }
             }
