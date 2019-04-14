@@ -1,7 +1,12 @@
+@import '_variables';
+
 .banner {
     svg {
-        width: 200px;
-        height: 200px;
+        max-width: 100px;
+        max-height: 100px;
+        width: 14vmin;
+        height: 14vmin;
+        display: block;
     }
 }
 
@@ -9,8 +14,37 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 25px;
     font-weight: bold;
+    font-size: 3vmin;
+
+    .single__text {
+        margin: 0 30px;
+        font-weight: 500;
+        font-style: italic;
+    }
+
+    .single__author {
+        width: 80%;
+        text-align: right;
+        margin: 6px 10px 30px;
+        color: $primaryColor3;
+
+        span {
+            color:black;
+            font-size: 2vmin;
+        }
+    }
+
+    .single__icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+}
+.slider-wrapper {
+    background: $fifthColor3;
+    padding: 14px 0 30px;
 }
 
 // carousel library styles

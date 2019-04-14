@@ -69,7 +69,6 @@ class Contact extends React.Component {
     };
     return (
       <div className="contact-container">
-        <Banner page={'contact'} />
         <map style={style} id="entry-map" />
         <div className="container__contact-form">
           <form action="#" className="contact-form__wrapper">

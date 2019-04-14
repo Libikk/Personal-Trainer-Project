@@ -4,20 +4,18 @@ import Banner from '../containers/Banner';
 import services from '../../appPageFeed/services.json';
 import logo from '../images/banana.png';
 import ApprovalIcon from '../icons/approval.svg';
+// eslint-disable import/no-dynamic-require
 
 class Services extends React.Component {
-  tibia = () => {
-    console.log('ssss');
-  }
   render() {
     return (
       <div className="services__container">
-        <Banner page='services' />
+        <Banner page="services" />
         <div className="services__options">
           {
               services.map(singleService => (
-                <div className="options__single-option">
-                  <img src={require(`../images/${singleService.imageUrl}`)} alt={singleService.serviceName} />
+                <div className="options__single-option" key={singleService.serviceName}>
+                  <img src={require(`../images/${singleService.imageUrl}`) } alt={singleService.serviceName} />
                   {singleService.serviceName}
                 </div>))
             }
