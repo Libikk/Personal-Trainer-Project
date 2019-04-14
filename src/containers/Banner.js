@@ -30,7 +30,7 @@ export default class Banner extends React.Component {
             bannerTexts[this.props.page].map((e) => {
               const bannerIcons = e.icons.map(f => icons[f]);
               return (
-                <div className="single" key={e.author + Math.random()}>
+                <div className="banner__single" key={e.author + Math.random()}>
                   <span className="single__text">
                   “{e.text}“
                   </span>
