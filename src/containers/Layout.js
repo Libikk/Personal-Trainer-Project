@@ -11,9 +11,9 @@ class Layout extends React.Component {
 
   render() {
     return (
-      <div className="f">
+      <div>
         <Header location={this.props.location} />
-        <section>
+        <section className="layout-section">
           {this.props.children}
         </section>
         <Footer />

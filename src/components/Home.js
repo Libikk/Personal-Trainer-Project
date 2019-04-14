@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/home.scss';
+import Banner from '../containers/Banner';
 import Interview from '../icons/interview.svg';
 import Training from '../icons/training.svg';
 import Trophy from '../icons/trophy.svg';
@@ -17,7 +18,8 @@ class Home extends React.Component {
   render() {
     return (
       <div className="homepage">
-        <img src={ptSession} alt="pt_session" />
+        {/* <img src={ptSession} alt="pt_session" /> */}
+        <Banner page="home" />
         <div className="homepage__header">
           <h1>HOW IT WORKS</h1>
           <div className="homepage__steps">

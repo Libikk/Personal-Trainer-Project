@@ -1,6 +1,7 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import Banner from '../containers/Banner';
 import { hideLoadingBar, showLoadingBar } from '../browser/actions';
 import '../styles/prices.scss';
 import prices from '../../appPageFeed/prices.json';
@@ -9,6 +10,7 @@ class Prices extends React.Component {
   render() {
     return (
       <div className="prices">
+        <Banner page="prices" />
         {
           prices.map(pricing => (
             <section className="prices__container" key={pricing.title}>

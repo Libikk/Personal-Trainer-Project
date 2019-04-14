@@ -85,8 +85,8 @@
 
             @media screen and (max-width: $small) {
                 flex-direction: column;
-                max-height: unset;
                 max-width: 600px;
+                margin-bottom: 10px;
             }
             
             .pop-up__header {
@@ -184,6 +184,7 @@
 
                 margin-right: 0;
                 padding: 20px 24px;
+                overflow: auto;
 
                 @media screen and (max-width: $small) {
                     max-width: unset;

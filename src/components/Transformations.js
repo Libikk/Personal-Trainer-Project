@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Banner from '../containers/Banner';
 import { bindActionCreators } from 'redux';
 import '../styles/transformations.scss';
 import { hideLoadingBar, showLoadingBar } from '../browser/actions';
@@ -35,6 +36,7 @@ class Transformations extends React.Component {
     });
     return (
       <div className="transformations-container">
+        <Banner page={'transformations'} />
         <div className="transformations__wrapper">
           {transformationsListRendered}
         </div>

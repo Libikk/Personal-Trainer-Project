@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/contact.scss';
+import Banner from '../containers/Banner';
 
 
 let map;
