@@ -1,0 +1,12 @@
+[alias]
+    st = status
+    c = commit
+    br = branch -v
+    co = checkout
+    df = diff
+    lg = log -p
+    up = pull
+    who = shortlog -s --
+    diff = diff --no-prefix
+    llog = log --pretty=\"format:%C(yellow normal)%h %Cgreen%an %C(cyan normal)(%ci) %Creset%s\"
+    glog = log --pretty=oneline --graph --decorate --simplify-by-decoration --all --stat
